@@ -1,8 +1,10 @@
-// import React from "react";
+import Search from "../components/Search";
 
 // criando o componente Home
 const Home = () => {
-  return <div>Home</div>;
+  return <div>
+    <Search />
+    </div>;
 };
 // exportando o componente Home
 export default Home;
