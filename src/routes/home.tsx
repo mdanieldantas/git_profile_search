@@ -12,8 +12,17 @@ const Home = () => {
   // criando o estado local para o componente Home e o setUser para atualizar o estado local começa por null e vai receber um objeto do tipo UserProps
 const [user, setUser] = useState<UserProps|null>(null);
 
+const loadUser = async (userName: string) => {
+
+  const res = await fetch(`https://api.github.com/users/${userName}`);
+
+  const data = await res.json();
+
+  console.log(data);
+
+}
   return <div>
-    <Search />
+    <Search loadUser={loadUser}/>
     </div>;
 };
 // exportando o componente Home
