@@ -1,40 +1,49 @@
-
-// impotando o componente User e o UserProps da aplicação 
+// Importando o tipo UserProps da aplicação
 import { UserProps } from "../types/user";
-// impotando o componente Search 
+// Importando o componente Search
 import Search from "../components/Search";
-// importando o useState do react  para criar um estado local para o componente Home
+// Importando o useState do React para criar um estado local no componente Home
 import { useState } from "react";
 
-
-// criando o componente Home
+// Criando o componente Home
 const Home = () => {
-  // criando o estado local para o componente Home e o setUser para atualizar o estado local começa por null e vai receber um objeto do tipo UserProps
-const [user, setUser] = useState<UserProps|null>(null);
- 
-const loadUser = async (userName: string) => {
+  // Criando um estado local chamado 'user' e uma função 'setUser' para atualizar esse estado.
+  // O estado inicial é null e ele pode receber um objeto do tipo UserProps
+  const [user, setUser] = useState<UserProps | null>(null);
 
-  const res = await fetch(`https://api.github.com/users/${userName}`);
+  // Função assíncrona para carregar os dados do usuário a partir do GitHub
+  const loadUser = async (userName: string) => {
+    // Fazendo uma requisição para a API do GitHub com o nome de usuário fornecido
+    const res = await fetch(`https://api.github.com/users/${userName}`);
 
-  const data = await res.json();
+    // Convertendo a resposta para JSON
+    const data = await res.json();
 
-  const {avatar_url, login, location, folowers, following} = data;
+    // Extraindo os dados necessários da resposta
+    const { avatar_url, login, location, followers, following } = data;
 
-  const userData: UserProps = {
-    avatar_url,
-    login,
-    location,
-    folowers,
-    following
+    // Criando um objeto do tipo UserProps com os dados extraídos
+    const userData: UserProps = {
+      avatar_url,
+      login,
+      location,
+      followers,
+      following
+    };
+
+    // Atualizando o estado 'user' com os dados do usuário
+    setUser(userData);
   };
 
-  setUser(userData);
-
-}
-  return <div>
-    <Search loadUser={loadUser}/>
-    {user && <p>{user.login}</p>}
-    </div>;
+  // Renderizando o componente Search e passando a função loadUser como prop
+  // Se o estado 'user' não for null, renderiza o login do usuário
+  return (
+    <div>
+      <Search loadUser={loadUser} />
+      {user && <p>{user.login}</p>}
+    </div>
+  );
 };
-// exportando o componente Home
+
+// Exportando o componente Home
 export default Home;
