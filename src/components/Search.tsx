@@ -8,6 +8,8 @@ type SearchProps = {
   
   // Importando o ícone BsSearch do pacote react-icons
   import { BsSearch } from "react-icons/bs";
+
+  import classes from "./Search.module.css";
   
   // Definindo o componente funcional Search que recebe as props do tipo SearchProps
   const Search = ({ loadUser }: SearchProps) => {
@@ -17,12 +19,13 @@ type SearchProps = {
   
     // Retornando o JSX que será renderizado pelo componente
     return (
-      <>
+      <div className={classes.search}>
         {/* Título do componente */}
         <h2>Busque por usuário</h2>
         {/* Descrição do componente */}
         <p>Conheça seus melhores repositórios</p>
-        <div>
+        {/* Div que contém o campo de entrada de texto e o botão e o css em class name */}
+        <div className={classes.search_container}>
           {/* Campo de entrada de texto para digitar o nome do usuário */}
           <input 
             type="text" 
@@ -36,7 +39,7 @@ type SearchProps = {
             <BsSearch />
           </button>
         </div>
-      </>
+      </div>
     );
   };
   

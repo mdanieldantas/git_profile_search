@@ -1,0 +1,50 @@
+.search {
+    /* Define a cor de fundo do elemento */
+    background-color: #2b3566;
+    /* Adiciona um preenchimento interno ao redor do conteúdo */
+    padding: 2rem;
+    /* Arredonda os cantos do elemento */
+    border-radius: 1rem;
+    /* Define o layout flexível para o elemento */
+    display: flex;
+    /* Define a direção dos itens flexíveis como coluna */
+    flex-direction: column;
+    /* Centraliza os itens ao longo do eixo principal */
+    justify-content: center;
+    /* Centraliza os itens ao longo do eixo transversal */
+    align-items: center;
+    /* Define o espaço entre os itens */
+    gap: 1rem;
+    /* Adiciona uma margem inferior ao elemento */
+    margin-bottom: 1.5rem;
+}
+
+.search p {
+    /* Define a cor do texto */
+    color: #9da5d1;
+}
+
+.search_container {
+    /* Define o layout flexível para o elemento */
+    display: flex;
+    /* Define o espaço entre os itens */
+    gap: 0.5rem;
+}
+
+.search_container input, .search_container button {
+    /* Adiciona um preenchimento interno ao redor do conteúdo */
+    padding: 0.5rem;
+    /* Arredonda os cantos do elemento */
+    border-radius: 3px;
+    /* Remove a borda padrão */
+    border: none;
+    /* Define a cor do texto */
+    color: #2b3566;
+}
+
+.search_container button {
+    /* Define a cor de fundo do botão */
+    background-color: #0e1129;
+    /* Muda o cursor para um ponteiro quando o mouse está sobre o botão */
+    cursor: pointer;
+}
