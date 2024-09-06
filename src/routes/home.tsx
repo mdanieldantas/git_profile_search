@@ -5,6 +5,9 @@ import Search from "../components/Search";
 // Importando o useState do React para criar um estado local no componente Home
 import { useState } from "react";
 
+import User from "../components/User";
+
+
 // Criando o componente Home
 const Home = () => {
   // Criando um estado local chamado 'user' e uma função 'setUser' para atualizar esse estado.
@@ -40,7 +43,7 @@ const Home = () => {
   return (
     <div>
       <Search loadUser={loadUser} />
-      {user && <p>{user.login}</p>}
+      {user && <User {...user} />}
     </div>
   );
 };

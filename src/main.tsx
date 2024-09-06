@@ -11,7 +11,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Pages
 // importando o componente Home
-import Home from "./routes/home.tsx";
+import Home from "./routes/Home.tsx";
 
 // criando o router para a aplicação invocando a função createBrowserRouter que dentro dela passa um array que passa um objeto com a rota e o componente que será renderizado App é o componente principal da aplicação repetido em toda as paginas, nele vai ter o titulo da aplicação e vai ser o container dela
 const router = createBrowserRouter([
