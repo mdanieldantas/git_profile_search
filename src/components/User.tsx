@@ -7,6 +7,9 @@ import { MdLocationPin } from "react-icons/md";
 // Importando o componente Link do pacote react-router-dom para navegação
 import { Link } from "react-router-dom";
 
+// Importando os estilos CSS do módulo User.module.css
+import classes from "./User.module.css";
+
 // Definindo o componente funcional User que recebe as props do tipo UserProps
 const User = ({
   login, // Nome de usuário
@@ -16,29 +19,29 @@ const User = ({
   location, // Localização do usuário
 }: UserProps) => {
   return (
-    <div>
+    <div className={classes.user}>
       {/* Imagem do avatar do usuário */}
       <img src={avatar_url} alt={login} />
       {/* Nome de usuário */}
       <h2>{login}</h2>
 
-      {/* Localização do usuário */}
+      {/* Localização do usuário, renderizada apenas se estiver definida */}
       {location && (
-        <p>
+        <p className={classes.location}>
           <MdLocationPin /> {/* Ícone de localização */}
           <span>{location}</span>
         </p>
       )}
 
       {/* Div que contém as informações de seguidores e seguindo */}
-      <div>
+      <div className={classes.stats}>
         <div>
           <p>Seguidores:</p>
-          <p>{followers}</p>
+          <p className={classes.number}>{followers}</p>
         </div>
         <div>
           <p>Seguindo:</p>
-          <p>{following}</p>
+          <p className={classes.number}>{following}</p>
         </div>
       </div>
 
