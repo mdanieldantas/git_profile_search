@@ -7,6 +7,8 @@ import { useState } from "react";
 
 import User from "../components/User";
 
+import Error from "../components/Error";
+
 
 // Criando o componente Home
 const Home = () => {
@@ -14,13 +16,22 @@ const Home = () => {
   // O estado inicial é null e ele pode receber um objeto do tipo UserProps
   const [user, setUser] = useState<UserProps | null>(null);
 
+  const [error, setError] = useState(false);
+
   // Função assíncrona para carregar os dados do usuário a partir do GitHub
   const loadUser = async (userName: string) => {
+    setError(false);
+    setUser(null);
     // Fazendo uma requisição para a API do GitHub com o nome de usuário fornecido
     const res = await fetch(`https://api.github.com/users/${userName}`);
 
     // Convertendo a resposta para JSON
     const data = await res.json();
+
+    if(res.status === 404) {
+      setError(true);
+      return;
+    }
 
     // Extraindo os dados necessários da resposta
     const { avatar_url, login, location, followers, following } = data;
@@ -44,6 +55,7 @@ const Home = () => {
     <div>
       <Search loadUser={loadUser} />
       {user && <User {...user} />}
+      {error && <Error />}
     </div>
   );
 };
