@@ -53,7 +53,7 @@ const Repos = () => {
 
   // Retorna um elemento div que contém o botão de voltar e exibe o texto "Repos" seguido pelo valor de 'username'
   return (
-    <div>
+    <div className={classes.repos}>
       {/* Renderiza o componente BackBtn */}
       <BackBtn />
       {/* Exibe o texto "Explore os repositórios do usuário" seguido pelo valor de 'username' */}
@@ -62,7 +62,7 @@ const Repos = () => {
       {repos && repos.length === 0 && <p>Não há repositório.</p>}
       {/* Se houver repositórios, mapeia e exibe os nomes dos repositórios */}
       {repos && repos.length > 0 && (
-        <div>
+        <div className={classes.repos_container}>
           {repos.map((repo: RepoProps) => (
             <Repo key={repo.name}{...repo}/>
           ))}
