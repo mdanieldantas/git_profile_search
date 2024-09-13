@@ -7,9 +7,11 @@ import BackBtn from "../components/BackBtn";
 // Importa os estilos do arquivo CSS Repos.module.css
 import classes from "./Repos.module.css";
 // Importa o tipo RepoPros do arquivo de tipos
-import { RepoPros } from "../types/repo";
+import { RepoProps } from "../types/repo";
 // Importa o componente Loader
 import Loader from "../components/Loader";
+
+import Repo from "../components/Repo";
 
 // Define o componente funcional Repos
 const Repos = () => {
@@ -17,7 +19,7 @@ const Repos = () => {
   const { username } = useParams();
 
   // Define o estado 'repos' para armazenar os repositórios, inicializado como null
-  const [repos, setRepos] = useState<RepoPros[] | [] | null>(null);
+  const [repos, setRepos] = useState<RepoProps[] | [] | null>(null);
 
   // Define o estado 'isLoading' para controlar o estado de carregamento, inicializado como false
   const [isLoading, setIsLoading] = useState(false);
@@ -61,8 +63,8 @@ const Repos = () => {
       {/* Se houver repositórios, mapeia e exibe os nomes dos repositórios */}
       {repos && repos.length > 0 && (
         <div>
-          {repos.map((repo: RepoPros) => (
-            <p key={repo.name}>{repo.name}</p>
+          {repos.map((repo: RepoProps) => (
+            <Repo key={repo.name}{...repo}/>
           ))}
         </div>
       )}

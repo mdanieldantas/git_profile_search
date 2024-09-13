@@ -1,5 +1,5 @@
 // Define um tipo chamado RepoPros
-export type RepoPros = {
+export type RepoProps = {
     // Propriedade 'name' do tipo string, que representa o nome do repositório
     name: string;
     // Propriedade 'html_url' do tipo string, que representa a URL do repositório
