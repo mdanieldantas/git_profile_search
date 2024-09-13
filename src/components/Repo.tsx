@@ -6,6 +6,7 @@ import { AiOutlineStar, AiOutlineFork } from "react-icons/ai";
 
 import { RiGitRepositoryLine } from "react-icons/ri";
 
+import classes from "./Repo.module.css";
 const Repo = ({
   name,
   language,
@@ -13,11 +14,12 @@ const Repo = ({
   forks_count,
   stargazers_count,
 }: RepoProps) => {
-  return <div>
-    <h3>{name}</h3>
+  return <div className={classes.repo}>
+    <h3 >{name}</h3>
     <p><BsCodeSlash />
-    {language}</p>
-    <div>
+    {language}
+    </p>
+    <div className={classes.stats}>
         <div>
             <AiOutlineStar/>
             <span>{stargazers_count}</span>
@@ -27,7 +29,7 @@ const Repo = ({
             <span>{forks_count}</span>
         </div>
     </div>
-<a href={html_url} target="_blank">
+<a href={html_url} target="_blank" className={classes.repo_btn}>
     <span>Ver código</span>
     <RiGitRepositoryLine aria-label="" />
 </a>

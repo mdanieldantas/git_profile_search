@@ -38,8 +38,15 @@ const Repos = () => {
       const data = await res.json();
       // Define 'isLoading' como false para indicar que os dados foram carregados
       setIsLoading(false);
+      // Ordena os repositórios pelo número de estrelas em ordem decrescente
+      let orderderedRepos = data.sort((a: RepoProps, b: RepoProps) => b.stargazers_count - a.stargazers_count);
+      // Limita o número de repositórios a 5 por vez e armazena no estado 'repos' para ser exibido no componente Repos para o usuário
+      orderderedRepos = orderderedRepos.slice(0, 5);
+
+
+
       // Atualiza o estado 'repos' com os dados recebidos
-      setRepos(data);
+      setRepos(orderderedRepos);
     };
 
     // Se 'username' estiver definido, chama a função loadRepos
