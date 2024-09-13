@@ -34,7 +34,7 @@ GitHub Finder é uma aplicação web que permite aos usuários buscar perfis do 
 3. Execute o projeto:
 
     ```terminal
-    npm run dev
+    npm rum dev
     ```
 
 4. Abra http://localhost:3000 no seu navegador para ver a aplicação em execução.
