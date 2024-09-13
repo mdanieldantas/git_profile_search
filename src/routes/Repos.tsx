@@ -11,6 +11,7 @@ import { RepoProps } from "../types/repo";
 // Importa o componente Loader
 import Loader from "../components/Loader";
 
+// Importa o componente Repo
 import Repo from "../components/Repo";
 
 // Define o componente funcional Repos
@@ -39,11 +40,11 @@ const Repos = () => {
       // Define 'isLoading' como false para indicar que os dados foram carregados
       setIsLoading(false);
       // Ordena os repositórios pelo número de estrelas em ordem decrescente
-      let orderderedRepos = data.sort((a: RepoProps, b: RepoProps) => b.stargazers_count - a.stargazers_count);
-      // Limita o número de repositórios a 5 por vez e armazena no estado 'repos' para ser exibido no componente Repos para o usuário
-      orderderedRepos = orderderedRepos.slice(0, 5);
+      let orderedRepos = data.sort((a: RepoProps, b: RepoProps) => b.stargazers_count - a.stargazers_count);
+      // Limita o número de repositórios a 5 por vez
+      orderedRepos = orderedRepos.slice(0, 5);
       // Atualiza o estado 'repos' com os dados recebidos
-      setRepos(orderderedRepos);
+      setRepos(orderedRepos);
     };
 
     // Se 'username' estiver definido, chama a função loadRepos
@@ -68,7 +69,7 @@ const Repos = () => {
       {repos && repos.length > 0 && (
         <div className={classes.repos_container}>
           {repos.map((repo: RepoProps) => (
-            <Repo key={repo.name}{...repo}/>
+            <Repo key={repo.name} {...repo} />
           ))}
         </div>
       )}

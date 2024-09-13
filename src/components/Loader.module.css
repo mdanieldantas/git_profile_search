@@ -1,16 +1,20 @@
+/* Define a animação de rotação */
 @keyframes rotate {
-    from{
-        transform: rotate(0deg);
+    from {
+      transform: rotate(0deg); /* Inicia a rotação em 0 graus */
     }
-    to {transform: rotate(360deg);
-}
-}
-
-.loader {       
-    animation: rotate 2s linear infinite;
-    position: absolute;
-    left: 50%;
-    margin-top: 40px;
-    font-size: 50px;
-    margin-left:-25px;
-}
+    to {
+      transform: rotate(360deg); /* Termina a rotação em 360 graus */
+    }
+  }
+  
+  /* Estiliza o elemento com a classe 'loader' */
+  .loader {
+    animation: rotate 2s linear infinite; /* Aplica a animação de rotação com duração de 2 segundos, de forma linear e infinita */
+    position: absolute; /* Posiciona o elemento de forma absoluta */
+    left: 50%; /* Centraliza o elemento horizontalmente */
+    margin-top: 40px; /* Adiciona margem superior de 40px */
+    font-size: 50px; /* Define o tamanho da fonte como 50px */
+    margin-left: -25px; /* Ajusta a margem esquerda para centralizar o elemento */
+  }
+  

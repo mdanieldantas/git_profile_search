@@ -1,9 +1,12 @@
-.app{
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.app h1{
-    text-align: center;
-    margin-bottom: 1rem;
-}
+/* Estiliza o contêiner principal da aplicação */
+.app {
+    max-width: 500px; /* Define a largura máxima como 500px */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+  }
+  
+  /* Estiliza o título h1 dentro da classe 'app' */
+  .app h1 {
+    text-align: center; /* Alinha o texto ao centro */
+    margin-bottom: 1rem; /* Adiciona uma margem inferior de 1rem */
+  }
+  

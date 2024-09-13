@@ -1,21 +1,24 @@
+/* Aplica estilos globais a todos os elementos */
 * {
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-  color: #fff;
+  padding: 0%; /* Remove o espaçamento interno padrão */
+  margin: 0%; /* Remove a margem padrão */
+  box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura */
+  font-family: "Inter", sans-serif; /* Define a fonte padrão como "Inter" */
+  color: #fff; /* Define a cor do texto como branco */
 }
 
+/* Estiliza o corpo da página */
 body {
-  background-color: #0e1129;
-  padding: 2rem;
+  background-color: #0e1129; /* Define a cor de fundo */
+  padding: 2rem; /* Adiciona espaçamento interno */
 }
 
+/* Estiliza os parágrafos */
 p {
-  text-align: center;
-
+  text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Estiliza os links */
 a {
-  text-decoration: none;
+  text-decoration: none; /* Remove a decoração padrão dos links (sublinhado) */
 }

@@ -1,42 +1,53 @@
-.repo{
-background-color: #0e1129;
-padding: 2rem;
-border-radius: 10px;
-border: 2px solid #9da5d1;
-display: flex;
-flex-direction: column;
-gap: 1rem;
-flex: 1;
-align-items: start;
-}
-
-.stats{
-    display: flex;
-    gap:1rem;
-}
-
-
-.stats div{
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    border-radius: 3px;
-    border: 1px solid #9da5d1;
-    padding: 0.4rem;
-}
-
-.stats svg{
-    background-color: #4ed8c7;
-    padding: 0.2rem;
-
-}
-.repo_btn{
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    color: #9da5d1;
-    background-color: #2b3566;
-    border-radius: 5px;
-    gap: 0.5rem;
-
-}
+/* Estiliza o contêiner principal do repositório */
+.repo {
+    background-color: #0e1129; /* Cor de fundo */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 2px solid #9da5d1; /* Borda sólida */
+    display: flex; /* Define o layout flexível */
+    flex-direction: column; /* Direção dos itens em coluna */
+    gap: 1rem; /* Espaçamento entre os itens */
+    flex: 1; /* Flexibilidade do item */
+    align-items: start; /* Alinhamento dos itens no início */
+  }
+  
+  /* Estiliza a seção de linguagem */
+  .language {
+    display: flex; /* Define o layout flexível */
+    align-items: center; /* Alinha os itens ao centro */
+    gap: 0.4rem; /* Espaçamento entre os itens */
+  }
+  
+  /* Estiliza a seção de estatísticas */
+  .stats {
+    display: flex; /* Define o layout flexível */
+    gap: 1rem; /* Espaçamento entre os itens */
+  }
+  
+  /* Estiliza cada item de estatística */
+  .stats div {
+    display: flex; /* Define o layout flexível */
+    align-items: center; /* Alinha os itens ao centro */
+    gap: 0.4rem; /* Espaçamento entre os itens */
+    border-radius: 3px; /* Bordas arredondadas */
+    border: 1px solid #9da5d1; /* Borda sólida */
+    padding: 0.4rem; /* Espaçamento interno */
+  }
+  
+  /* Estiliza os ícones SVG dentro das estatísticas */
+  .stats svg {
+    background-color: #4ed8c7; /* Cor de fundo */
+    padding: 0.2rem; /* Espaçamento interno */
+  }
+  
+  /* Estiliza o botão de link para o repositório */
+  .repo_btn {
+    display: flex; /* Define o layout flexível */
+    align-items: center; /* Alinha os itens ao centro */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    color: #9da5d1; /* Cor do texto */
+    background-color: #2b3566; /* Cor de fundo */
+    border-radius: 5px; /* Bordas arredondadas */
+    gap: 0.5rem; /* Espaçamento entre os itens */
+  }
+  
