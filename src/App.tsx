@@ -10,7 +10,7 @@ function App() {
       {/* Div principal que envolve o conteúdo da aplicação */}
       <div className={classes.app}>
         {/* Título da aplicação */}
-        <h1>Github Finder</h1>
+        <h1>Git Profile Search</h1>
         {/* Outlet é um placeholder para o conteúdo das rotas definidas no React Router */}
         <Outlet />
       </div>
