@@ -15,7 +15,9 @@ GitHub Finder é uma aplicação web que permite aos usuários buscar perfis do 
 ## Tecnologias Utilizadas
 
 - React
+- Vite
 - TypeScript
+- React Router DOM
 - CSS Modules
 - GitHub API
 
