@@ -30,7 +30,7 @@ const Repos = () => {
     // Define 'isLoading' como true para indicar que os dados estão sendo carregados
     setIsLoading(true);
     // Função assíncrona para carregar os repositórios do usuário
-    const loadRepos = async (userName: string) => {
+    const loadRepos = async (username: string) => {
       // Define 'isLoading' como true para indicar que os dados estão sendo carregados
       setIsLoading(true);
       // Faz uma requisição para a API do GitHub para obter os repositórios do usuário
