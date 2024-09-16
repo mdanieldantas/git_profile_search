@@ -1,4 +1,4 @@
-# GitHub Finder
+# Git Profile Search
 
 GitHub Finder é uma aplicação web que permite aos usuários buscar perfis do GitHub e visualizar informações detalhadas sobre os usuários e seus repositórios.
 
