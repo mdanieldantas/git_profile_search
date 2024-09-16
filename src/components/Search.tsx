@@ -12,7 +12,7 @@ import { BsSearch } from "react-icons/bs";
 // Importando os estilos CSS do módulo Search.module.css
 import classes from "./Search.module.css";
 
-// Definindo o componente funcional Search que recebe as props do tipo SearchProps
+// Definindo o componente funcional Search que recebe as props do tipo SearchProps. teste
 const Search = ({ loadUser }: SearchProps) => {
   // Criando um estado local chamado userName e uma função setUserName para atualizar esse estado
   // O estado inicial é uma string vazia
