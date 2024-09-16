@@ -4,6 +4,7 @@ GitHub Finder é uma aplicação web que permite aos usuários buscar perfis do 
 
 ![Projeto](/public/ImgDesktopSiteTela1.jpg)
 ![Projeto](/public/ImgDesktopSiteTela2.jpg)
+
 ## Funcionalidades
 
 - 🔍 Busca de perfis de usuários do GitHub
